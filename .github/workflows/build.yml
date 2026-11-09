@@ -1,0 +1,83 @@
+# Builds ChronPod on a free GitHub-hosted Mac every time code is pushed.
+name: Build ChronPod
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-15
+    timeout-minutes: 45
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Find the project folder
+        run: |
+          echo "Files in the repository:"
+          find . -path ./.git -prune -o -maxdepth 3 -print | sort | head -100
+          P=$(find . -path ./.git -prune -o -maxdepth 3 -name project.yml -print | head -1)
+          if [ -z "$P" ]; then echo "project.yml not found - some files did not upload"; exit 1; fi
+          D=$(dirname "$P")
+          if [ ! -d "$D/ChronPodCore" ]; then echo "ChronPodCore folder is missing next to project.yml"; exit 1; fi
+          echo "Project folder: $D"
+          echo "PROJ=$D" >> "$GITHUB_ENV"
+
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Test the core library (feeds, OPML, Google News links)
+        working-directory: ${{ env.PROJ }}
+        run: swift test --package-path ChronPodCore
+
+      - name: Generate the Xcode project
+        working-directory: ${{ env.PROJ }}
+        run: xcodegen generate
+
+      - name: Build for the iPhone Simulator
+        working-directory: ${{ env.PROJ }}
+        run: |
+          mkdir -p build
+          xcodebuild build \
+            -project ChronPod.xcodeproj \
+            -scheme ChronPod \
+            -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/sim \
+            CODE_SIGNING_ALLOWED=NO > build/sim-build.log 2>&1 || { grep -E "error:" -A3 build/sim-build.log | head -200; exit 1; }
+          echo "Simulator build succeeded"
+
+      - name: Build an unsigned .ipa for iPhone
+        working-directory: ${{ env.PROJ }}
+        run: |
+          xcodebuild build \
+            -project ChronPod.xcodeproj \
+            -scheme ChronPod \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build/device \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            > build/device-build.log 2>&1 || { grep -E "error:" -A3 build/device-build.log | head -200; exit 1; }
+          mkdir -p build/ipa/Payload
+          cp -R build/device/Build/Products/Release-iphoneos/ChronPod.app build/ipa/Payload/
+          cd build/ipa && zip -qry ../ChronPod-unsigned.ipa Payload
+
+      - name: Upload the .ipa
+        uses: actions/upload-artifact@v4
+        with:
+          name: ChronPod-unsigned-ipa
+          path: ${{ env.PROJ }}/build/ChronPod-unsigned.ipa
+          retention-days: 30
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-logs
+          path: ${{ env.PROJ }}/build/*.log
+          if-no-files-found: ignore
