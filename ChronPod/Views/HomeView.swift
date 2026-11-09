@@ -3,7 +3,7 @@ import ChronPodCore
 
 struct HomeView: View {
     @EnvironmentObject private var library: LibraryStore
-    @State private var showTopics = false
+    @State private var showTopics = ScreenshotMode.screen == "topics"
     @State private var showAdd = false
 
     var body: some View {
