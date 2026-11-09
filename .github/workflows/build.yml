@@ -52,6 +52,50 @@ jobs:
             CODE_SIGNING_ALLOWED=NO > build/sim-build.log 2>&1 || { grep -E "error:" -A3 build/sim-build.log | head -200; exit 1; }
           echo "Simulator build succeeded"
 
+      - name: Take screenshots in the iPhone Simulator
+        working-directory: ${{ env.PROJ }}
+        continue-on-error: true
+        run: |
+          APP=build/sim/Build/Products/Debug-iphonesimulator/ChronPod.app
+          UDID=$(xcrun simctl list devices available -j | python3 -c "
+          import json, sys
+          d = json.load(sys.stdin)['devices']
+          ios = sorted((k for k in d if 'iOS' in k), reverse=True)
+          print(next(x['udid'] for k in ios for x in d[k] if x['name'].startswith('iPhone')))")
+          echo "Using simulator $UDID"
+          xcrun simctl boot "$UDID"
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 || true
+          xcrun simctl install "$UDID" "$APP"
+          mkdir -p build/screenshots
+          shot() {
+            xcrun simctl launch "$UDID" com.chronlaw.chronpod -screenshot "$1"
+            sleep "$2"
+            xcrun simctl io "$UDID" screenshot "build/screenshots/$3.png"
+            xcrun simctl terminate "$UDID" com.chronlaw.chronpod || true
+            sleep 2
+          }
+          # The first launch subscribes to ChronLaw Breaking News and loads the headlines.
+          shot home 60 1-home
+          shot home 20 2-home-again
+          shot topics 10 3-chronlaw-topics
+          shot subscriptions 10 4-subscriptions
+          shot queue 6 5-queue
+          shot settings 6 6-settings
+          ls -l build/screenshots
+          # Simulator copy of the app, for browser-based simulators such as Appetize.io
+          (cd build/sim/Build/Products/Debug-iphonesimulator && zip -qry ../../../../ChronPod-simulator.zip ChronPod.app)
+
+      - name: Upload the screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ChronPod-screenshots
+          path: |
+            ${{ env.PROJ }}/build/screenshots/*.png
+            ${{ env.PROJ }}/build/ChronPod-simulator.zip
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Build an unsigned .ipa for iPhone
         working-directory: ${{ env.PROJ }}
         run: |
