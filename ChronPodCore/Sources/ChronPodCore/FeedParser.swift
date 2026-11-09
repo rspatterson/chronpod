@@ -241,7 +241,12 @@ public final class FeedParser: NSObject, XMLParserDelegate {
 
     private func finishItem() {
         inItem = false
-        let title = item.title.isEmpty ? (item.source ?? "Untitled") : item.title
+        var title = item.title.isEmpty ? (item.source ?? "Untitled") : item.title
+        // Google News appends the publisher ("Headline - Houston Chronicle"); it is shown separately.
+        if let source = item.source, !source.isEmpty, title.hasSuffix(" - " + source),
+           title.count > source.count + 3 {
+            title = String(title.dropLast(source.count + 3))
+        }
         let guid = item.guid ?? item.enclosureURL ?? item.link ?? title
         let ep = Episode(
             podcastID: podcastID,

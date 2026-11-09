@@ -5,6 +5,7 @@ struct HomeView: View {
     @EnvironmentObject private var library: LibraryStore
     @State private var showTopics = ScreenshotMode.screen == "topics"
     @State private var showAdd = false
+    @State private var screenshotArticle: WebLink?
 
     var body: some View {
         List {
@@ -27,6 +28,7 @@ struct HomeView: View {
                         Image(systemName: "chevron.right").font(.footnote).foregroundStyle(.tertiary)
                     }
                 }
+                .tint(.primary)
             }
 
             Section {
@@ -82,6 +84,19 @@ struct HomeView: View {
         }
         .sheet(isPresented: $showTopics) { TopicPickerView() }
         .sheet(isPresented: $showAdd) { AddPodcastView() }
+        .sheet(item: $screenshotArticle) { link in
+            SafariView(url: link.url).ignoresSafeArea()
+        }
+        .task {
+            // Used only by the GitHub build's screenshots: open the newest headline at its source.
+            guard ScreenshotMode.screen == "article" else { return }
+            for _ in 0..<60 where library.breakingNews.isEmpty {
+                try? await Task.sleep(nanoseconds: 500_000_000)
+            }
+            if let first = library.breakingNews.first, let url = await library.articleURL(for: first) {
+                screenshotArticle = WebLink(url: url)
+            }
+        }
     }
 
     private func emptyRow(_ text: String) -> some View {
@@ -113,13 +128,14 @@ struct TopicPickerView: View {
         NavigationStack {
             List {
                 Section {
-                    Text("Check the topics you want to follow. Breaking News is selected for you to start. Topics come from \(library.directorySource).")
+                    Text("Check the topics you want to follow. Breaking News is selected for you to start. Topics come from \(library.directorySource == "built-in list" ? "the list built into the app" : library.directorySource).")
                         .font(.footnote).foregroundStyle(.secondary)
                 }
                 ForEach(categories) { cat in
                     Section {
                         ForEach(cat.feeds) { feed in
                             Button { toggle(feed.url) } label: { row(feed) }
+                                .tint(.primary)
                         }
                     } header: {
                         HStack {

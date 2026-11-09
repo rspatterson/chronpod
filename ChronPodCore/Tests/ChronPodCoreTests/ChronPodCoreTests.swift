@@ -76,6 +76,7 @@ final class FeedParserTests: XCTestCase {
         let ep = feed.episodes[0]
         XCTAssertFalse(ep.hasMedia)
         XCTAssertEqual(ep.sourceName, "Houston Chronicle")
+        XCTAssertEqual(ep.title, "Court rules on dog bite case")
         XCTAssertEqual(ep.guid, "CBMiK0FVX3lxTE5fYWJj")
         XCTAssertNotNil(ep.pubDate)
         XCTAssertTrue(GoogleNews.isGoogleLink(ep.link ?? ""))

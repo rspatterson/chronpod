@@ -277,7 +277,8 @@ final class LibraryStore: ObservableObject {
         if !keepTitle { p.title = parsed.title }
         p.author = parsed.author ?? p.author
         if p.directoryCategory == nil { p.summary = parsed.summary ?? p.summary }
-        p.imageURL = parsed.imageURL ?? p.imageURL
+        // ChronLaw topics show the ChronPod newspaper symbol rather than Google News' logo.
+        p.imageURL = p.directoryCategory == nil ? (parsed.imageURL ?? p.imageURL) : nil
         p.link = parsed.link ?? p.link
     }
 
