@@ -12,6 +12,10 @@ public struct DirectoryCategory: Hashable, Sendable, Identifiable {
     public var id: String { title }
     public var title: String
     public var feeds: [DirectoryFeed]
+    public init(title: String, feeds: [DirectoryFeed]) {
+           self.title = title
+           self.feeds = feeds
+       }
 }
 
 public struct DirectoryFeed: Hashable, Sendable, Identifiable {
