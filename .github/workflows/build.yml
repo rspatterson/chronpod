@@ -82,6 +82,7 @@ jobs:
           shot subscriptions 10 4-subscriptions
           shot queue 6 5-queue
           shot settings 6 6-settings
+          shot article 25 7-first-headline-opened
           ls -l build/screenshots
           # Simulator copy of the app, for browser-based simulators such as Appetize.io
           (cd build/sim/Build/Products/Debug-iphonesimulator && zip -qry ../../../../ChronPod-simulator.zip ChronPod.app)
