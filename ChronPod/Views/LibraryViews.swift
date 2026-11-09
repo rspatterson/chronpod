@@ -1,0 +1,288 @@
+import SwiftUI
+import UniformTypeIdentifiers
+import ChronPodCore
+
+struct QueueView: View {
+    @EnvironmentObject private var library: LibraryStore
+    @EnvironmentObject private var player: PlayerController
+
+    var body: some View {
+        List {
+            if library.queuedEpisodes.isEmpty {
+                Text("Your queue is empty. Use \"Add to Queue\" on any episode to line it up here; ChronPod plays the queue in order.")
+                    .font(.footnote).foregroundStyle(.secondary)
+            }
+            ForEach(library.queuedEpisodes) { ep in
+                EpisodeLink(episode: ep)
+            }
+            .onMove { library.moveQueue(from: $0, to: $1) }
+            .onDelete { offsets in
+                let ids = offsets.map { library.queuedEpisodes[$0].id }
+                ids.forEach { library.dequeue($0) }
+            }
+        }
+        .navigationTitle("Queue")
+        .toolbar {
+            if !library.queue.isEmpty {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        if let first = library.queuedEpisodes.first { player.play(first) }
+                    } label: {
+                        Label("Play Queue", systemImage: "play.fill")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) { EditButton() }
+            }
+        }
+    }
+}
+
+struct DownloadsView: View {
+    @EnvironmentObject private var library: LibraryStore
+    @EnvironmentObject private var downloads: DownloadManager
+
+    private var downloaded: [Episode] {
+        downloads.files.keys.compactMap { library.episode($0) }
+            .sorted { ($0.pubDate ?? .distantPast) > ($1.pubDate ?? .distantPast) }
+    }
+
+    private var inProgress: [Episode] {
+        downloads.progress.keys.compactMap { library.episode($0) }
+    }
+
+    var body: some View {
+        List {
+            if !inProgress.isEmpty {
+                Section("Downloading") {
+                    ForEach(inProgress) { ep in
+                        VStack(alignment: .leading, spacing: 4) {
+                            Text(ep.title).font(.subheadline).lineLimit(2)
+                            ProgressView(value: downloads.progress[ep.id] ?? 0).tint(Theme.accent)
+                        }
+                        .swipeActions {
+                            Button("Cancel", role: .destructive) { downloads.cancel(ep) }
+                        }
+                    }
+                }
+            }
+            Section {
+                if downloaded.isEmpty {
+                    Text("Downloaded episodes play without an internet connection. Tap Download on any episode.")
+                        .font(.footnote).foregroundStyle(.secondary)
+                }
+                ForEach(downloaded) { ep in
+                    EpisodeLink(episode: ep)
+                        .swipeActions {
+                            Button(role: .destructive) { downloads.delete(ep) } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                }
+            } header: {
+                Text("Downloaded")
+            } footer: {
+                if !downloaded.isEmpty { Text("Using \(Format.bytes(downloads.totalBytes))") }
+            }
+        }
+        .navigationTitle("Downloads")
+    }
+}
+
+struct NowPlayingView: View {
+    @EnvironmentObject private var player: PlayerController
+    @EnvironmentObject private var library: LibraryStore
+    @Environment(\.dismiss) private var dismiss
+    @State private var scrubbing: Double?
+
+    var body: some View {
+        NavigationStack {
+            if let ep = player.current {
+                let podcast = library.podcast(ep.podcastID)
+                VStack(spacing: 22) {
+                    Spacer(minLength: 8)
+                    ArtworkView(url: ep.imageURL ?? podcast?.imageURL, size: 260)
+                        .shadow(radius: 10, y: 4)
+                    VStack(spacing: 4) {
+                        Text(ep.title).font(.headline).multilineTextAlignment(.center).lineLimit(3)
+                        Text(podcast?.title ?? "").font(.subheadline).foregroundStyle(.secondary)
+                    }
+                    .padding(.horizontal)
+
+                    VStack(spacing: 2) {
+                        Slider(value: Binding(
+                            get: { scrubbing ?? player.position },
+                            set: { scrubbing = $0 }
+                        ), in: 0...max(player.duration, max(player.position, 1)), onEditingChanged: { editing in
+                            if !editing, let s = scrubbing {
+                                player.seek(to: s)
+                                scrubbing = nil
+                            }
+                        })
+                        .tint(Theme.accent)
+                        HStack {
+                            Text(Format.duration(scrubbing ?? player.position) ?? "0:00")
+                            Spacer()
+                            if player.isBuffering { ProgressView().controlSize(.mini) }
+                            Spacer()
+                            Text("-" + (Format.duration(max(0, player.duration - (scrubbing ?? player.position))) ?? "0:00"))
+                        }
+                        .font(.caption.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                    }
+                    .padding(.horizontal, 24)
+
+                    HStack(spacing: 44) {
+                        Button { player.skip(by: -player.skipBack) } label: {
+                            Image(systemName: "gobackward.10").font(.system(size: 34))
+                        }
+                        Button { player.togglePlayPause() } label: {
+                            Image(systemName: player.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                                .font(.system(size: 72))
+                                .foregroundStyle(Theme.accent)
+                        }
+                        Button { player.skip(by: player.skipForward) } label: {
+                            Image(systemName: "goforward.30").font(.system(size: 34))
+                        }
+                    }
+                    .foregroundStyle(.primary)
+
+                    HStack(spacing: 30) {
+                        Menu {
+                            ForEach(PlayerController.rates, id: \.self) { r in
+                                Button { player.rate = r } label: {
+                                    if r == player.rate { Label(rateText(r), systemImage: "checkmark") }
+                                    else { Text(rateText(r)) }
+                                }
+                            }
+                        } label: {
+                            Label(rateText(player.rate), systemImage: "speedometer")
+                        }
+
+                        Menu {
+                            Button("Off") { player.setSleepTimer(minutes: nil) }
+                            ForEach([5, 10, 15, 30, 45, 60, 90], id: \.self) { m in
+                                Button("\(m) minutes") { player.setSleepTimer(minutes: m) }
+                            }
+                            Button("End of episode") { player.sleepAtEnd() }
+                        } label: {
+                            Label(sleepText, systemImage: "moon.zzz")
+                        }
+
+                        Button { player.stop(); dismiss() } label: {
+                            Label("Stop", systemImage: "stop.fill")
+                        }
+                    }
+                    .font(.subheadline)
+                    Spacer()
+                }
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button { dismiss() } label: { Image(systemName: "chevron.down") }
+                    }
+                }
+            } else {
+                ContentUnavailableView("Nothing playing", systemImage: "play.slash")
+                    .toolbar { Button("Close") { dismiss() } }
+            }
+        }
+        .presentationDragIndicator(.visible)
+    }
+
+    private func rateText(_ r: Float) -> String { PlayerController.rateLabel(r) }
+
+    private var sleepText: String {
+        if player.sleepAtEndOfEpisode { return "End of ep." }
+        if let end = player.sleepTimerEnds {
+            let mins = max(1, Int(end.timeIntervalSinceNow / 60))
+            return "\(mins) min"
+        }
+        return "Sleep"
+    }
+}
+
+struct SettingsView: View {
+    @EnvironmentObject private var library: LibraryStore
+    @EnvironmentObject private var player: PlayerController
+    @State private var importing = false
+    @State private var showTopics = false
+    @State private var exportURL: URL?
+    @State private var working = false
+
+    private static let opmlType = UTType(filenameExtension: "opml") ?? .xml
+
+    var body: some View {
+        Form {
+            Section {
+                Button { showTopics = true } label: { Label("Choose ChronLaw Topics", systemImage: "building.columns") }
+                LabeledContent("Topic list", value: library.directorySource)
+                Button {
+                    Task {
+                        working = true
+                        await library.updateDirectoryFromWeb()
+                        working = false
+                    }
+                } label: {
+                    HStack {
+                        Label("Check chronlaw.com for new topics", systemImage: "arrow.clockwise")
+                        if working { Spacer(); ProgressView() }
+                    }
+                }
+            } header: {
+                Text("ChronLaw")
+            } footer: {
+                Text("ChronPod reads its topic list from \(ChronLawDirectory.remoteURL.absoluteString) and falls back to the list built into the app.")
+            }
+
+            Section("Subscriptions") {
+                Button { importing = true } label: { Label("Import OPML File", systemImage: "square.and.arrow.down") }
+                if let url = exportURL {
+                    ShareLink(item: url) { Label("Share Exported OPML", systemImage: "square.and.arrow.up") }
+                } else {
+                    Button { exportURL = library.exportOPML() } label: {
+                        Label("Export Subscriptions (OPML)", systemImage: "square.and.arrow.up")
+                    }
+                }
+                Button {
+                    Task { await library.refreshAll() }
+                } label: { Label("Refresh All Now", systemImage: "arrow.triangle.2.circlepath") }
+            }
+
+            Section("Playback") {
+                Picker("Default speed", selection: $player.rate) {
+                    ForEach(PlayerController.rates, id: \.self) { r in
+                        Text(PlayerController.rateLabel(r)).tag(r)
+                    }
+                }
+                LabeledContent("Skip back", value: "\(Int(player.skipBack)) seconds")
+                LabeledContent("Skip forward", value: "\(Int(player.skipForward)) seconds")
+            }
+
+            Section("About") {
+                LabeledContent("Version", value: Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "")
+                Text("ChronPod is free software under the GNU General Public License v3. It is an iPhone adaptation of AntennaPod, the open-source Android podcast app, and gratefully builds on its design and code.")
+                    .font(.footnote)
+                Link("ChronPod source code", destination: URL(string: "https://github.com/chronlaw/chronpod")!)
+                Link("AntennaPod project", destination: URL(string: "https://github.com/AntennaPod/AntennaPod")!)
+                Link("ChronLaw", destination: URL(string: "https://chronlaw.com")!)
+                Text("News headlines and articles belong to their publishers. Nothing in ChronPod is legal advice; anyone with a current legal issue should consult a licensed attorney.")
+                    .font(.caption).foregroundStyle(.secondary)
+            }
+        }
+        .navigationTitle("Settings")
+        .sheet(isPresented: $showTopics) { TopicPickerView() }
+        .fileImporter(isPresented: $importing, allowedContentTypes: [Self.opmlType, .xml]) { result in
+            guard case .success(let url) = result else { return }
+            Task {
+                let access = url.startAccessingSecurityScopedResource()
+                defer { if access { url.stopAccessingSecurityScopedResource() } }
+                do {
+                    let data = try Data(contentsOf: url)
+                    let n = try await library.importOPML(data)
+                    library.message = "Imported \(n) new subscription\(n == 1 ? "" : "s")."
+                } catch {
+                    library.message = error.localizedDescription
+                }
+            }
+        }
+    }
+}

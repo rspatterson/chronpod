@@ -1,0 +1,645 @@
+<?xml version='1.0' encoding='utf-8'?>
+<opml version="2.0">
+  <head>
+    <dateCreated>Sat, 22 Feb 2025 02:39:16 +0000</dateCreated>
+    <title>ChronLaw Topics</title>
+  </head>
+  <body>
+    <outline text="Administrative Law">
+      <outline type="rss" text="Administrative Law" xmlUrl="https://news.google.com/rss/search?q=Administrative%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Administrative%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Admiralty and Maritime Law">
+      <outline type="rss" text="Admiralty and Maritime Law" xmlUrl="https://news.google.com/rss/search?q=admiralty%20law%20OR%20maritime%20law%20OR%20seamen&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=admiralty%20law%20OR%20maritime%20law%20OR%20seamen&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Agency Law">
+      <outline type="rss" text="Agency Law" xmlUrl="https://news.google.com/rss/search?q=agency%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=agency%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Agricultural Law">
+      <outline type="rss" text="Agricultural Law" xmlUrl="https://news.google.com/rss/search?q=Agricultural%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Agricultural%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Alternative Dispute Resolution">
+      <outline type="rss" text="Alternate Dispute Resolution" xmlUrl="https://news.google.com/rss/search?q=Alternate%20Dispute%20Resolution%20OR%20Mediation%20OR%20Arbitration&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Alternate%20Dispute%20Resolution%20OR%20Mediation%20OR%20Arbitration&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Animal Law">
+      <outline type="rss" text="Animal Law" xmlUrl="https://news.google.com/rss/search?q=Animal%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Animal%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Antitrust Law">
+      <outline type="rss" text="Antitrust Law" xmlUrl="https://news.google.com/rss/search?q=Antitrust%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Antitrust%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Appellate Advocacy">
+      <outline type="rss" text="Appellate Advocacy" xmlUrl="https://news.google.com/rss/search?q=Appellate%20Advocacy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Appellate%20Advocacy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Art Law">
+      <outline type="rss" text="Art Law" xmlUrl="https://news.google.com/rss/search?q=Art%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Art%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Artificial Intellegence">
+      <outline type="rss" text="Artificial Intellegence" xmlUrl="https://news.google.com/rss/search?q=Artificial%20Intellegence&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Artificial%20Intellegence&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Attorney">
+      <outline type="rss" text="Attorney" xmlUrl="https://news.google.com/rss/search?q=Attorney&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Attorney&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Attorney Fees">
+      <outline type="rss" text="Attorney Fees" xmlUrl="https://news.google.com/rss/search?q=Attorney%20Fees&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Attorney%20Fees&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Attorney Practice">
+      <outline type="rss" text="Attorney Practice" xmlUrl="https://news.google.com/rss/search?q=Attorney%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Attorney%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Banking Compliance">
+      <outline type="rss" text="Banking Compliance" xmlUrl="https://news.google.com/rss/search?q=Banking%20Compliance&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Banking%20Compliance&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Banking and Finance">
+      <outline type="rss" text="Banking and Finance" xmlUrl="https://news.google.com/rss/search?q=bank%20law%20OR%20finance%20law%20OR%20loans%20OR%20bank%20funds&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=bank%20law%20OR%20finance%20law%20OR%20loans%20OR%20bank%20funds&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Bankruptcy">
+      <outline type="rss" text="Bankruptcy" xmlUrl="https://news.google.com/rss/search?q=Bankruptcy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Bankruptcy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Blogs">
+      <outline type="rss" text="Blogs" xmlUrl="https://news.google.com/rss/search?q=Law%20Blogs&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Law%20Blogs&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Breaking News">
+      <outline type="rss" text="Breaking News" xmlUrl="https://news.google.com/rss/search?q=World%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=World%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Breaking News" xmlUrl="https://news.google.com/rss/search?q=Breaking%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Breaking%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Breaking News" xmlUrl="https://news.google.com/rss/search?q=Top%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Top%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Breaking News" xmlUrl="https://news.google.com/rss/search?q=National%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=National%20News&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Business Law">
+      <outline type="rss" text="Business Law" xmlUrl="https://news.google.com/rss/search?q=Business%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Business%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="CLE">
+      <outline type="rss" text="CLE" xmlUrl="https://news.google.com/rss/search?q=CLE%20Continuing%20Legal%20Education&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=CLE%20Continuing%20Legal%20Education&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="CLE In Person">
+      <outline type="rss" text="CLE In Person" xmlUrl="https://news.google.com/rss/search?q=Continuing%20Legal%20Education%20Live%20In%20Person%20Classes&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Continuing%20Legal%20Education%20Live%20In%20Person%20Classes&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="CLE Online">
+      <outline type="rss" text="CLE Online" xmlUrl="https://news.google.com/rss/search?q=Continuing%20Legal%20Education%20Online&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Continuing%20Legal%20Education%20Online&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="CLE Webinars">
+      <outline type="rss" text="CLE Webinars" xmlUrl="https://news.google.com/rss/search?q=CLE%20Continuing%20Legal%20Education%20Webinar&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=CLE%20Continuing%20Legal%20Education%20Webinar&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law">
+      <outline type="rss" text="Case Law" xmlUrl="https://news.google.com/rss/search?q=Case%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - Federal Court Cases">
+      <outline type="rss" text="Case Law - Federal Court Cases" xmlUrl="https://news.google.com/rss/search?q=Federal%20Case%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Federal%20Case%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  1st Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  1st Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%201st%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%201st%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  2nd Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  2nd Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%202nd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%202nd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  3rd Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  3rd Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%203rd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%203rd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  4th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  4th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%204th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%204th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  5th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  5th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%205th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%205th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  6th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  6th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%206th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%206th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  7th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  7th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%207th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%207th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  8th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  8th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%208th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%208th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the  9th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  9th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%209th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%209th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the 10th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  10th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%2010th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%2010th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the 11th Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  11th Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%2011th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%2011th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the District of Columbia Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the  District of Columbia Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%20District%20of%20Columbia%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%20District%20of%20Columbia%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Case Law - US Court of Appeals for the Federal Circuit">
+      <outline type="rss" text="Case Law - US Court of Appeals for the Federal Circuit" xmlUrl="https://news.google.com/rss/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%20Federal%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Case%20Law%20US%20Court%20of%20Appeals%20for%20the%20Federal%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Civil Practice">
+      <outline type="rss" text="Civil Practice" xmlUrl="https://news.google.com/rss/search?q=Civil%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Civil%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Civil Procedure">
+      <outline type="rss" text="Civil Procedure" xmlUrl="https://news.google.com/rss/search?q=Civil%20Procedure&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Civil%20Procedure&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Civil Rights">
+      <outline type="rss" text="Civil Rights" xmlUrl="https://news.google.com/rss/search?q=Civil%20Rights&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Civil%20Rights&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Class Actions">
+      <outline type="rss" text="Class Actions" xmlUrl="https://news.google.com/rss/search?q=Class%20Action&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Class%20Action&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Commercial Law">
+      <outline type="rss" text="Commercial Law" xmlUrl="https://news.google.com/rss/search?q=Commercial%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Commercial%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Communications Law">
+      <outline type="rss" text="Communications Law" xmlUrl="https://news.google.com/rss/search?q=Communications%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Communications%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Comparative Law">
+      <outline type="rss" text="Comparative Law" xmlUrl="https://news.google.com/rss/search?q=Comparative%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Comparative%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Computer Law">
+      <outline type="rss" text="Computer Law" xmlUrl="https://news.google.com/rss/search?q=Computer%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Computer%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Conflict of Laws">
+      <outline type="rss" text="Conflict of Law" xmlUrl="https://news.google.com/rss/search?q=Conflict%20of%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Conflict%20of%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Constitutional Law">
+      <outline type="rss" text="Constitutional Law" xmlUrl="https://news.google.com/rss/search?q=Constitutional%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Constitutional%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Constitutional Law" xmlUrl="https://news.google.com/rss/search?q=Constitution&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Constitution&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Construction Law">
+      <outline type="rss" text="Construction Law" xmlUrl="https://news.google.com/rss/search?q=Construction%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Construction%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Consumer Law">
+      <outline type="rss" text="Consumer Law" xmlUrl="https://news.google.com/rss/search?q=consumer%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=consumer%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Contract Law">
+      <outline type="rss" text="Contract Law" xmlUrl="https://news.google.com/rss/search?q=Contract%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Contract%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Copyright Law">
+      <outline type="rss" text="Copyright Law" xmlUrl="https://news.google.com/rss/search?q=Copyright%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Copyright%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Corporate Law">
+      <outline type="rss" text="Corporate Law" xmlUrl="https://news.google.com/rss/search?q=Corporate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Corporate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Court News">
+      <outline type="rss" text="Court News" xmlUrl="https://news.google.com/rss/search?q=court%20news&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=court%20news&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Credit Union Compliance">
+      <outline type="rss" text="Credit Union Compliance" xmlUrl="https://news.google.com/rss/search?q=Credit%20Union%20Compliance&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Credit%20Union%20Compliance&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Criminal Justice">
+      <outline type="rss" text="Criminal Justice" xmlUrl="https://news.google.com/rss/search?q=Criminal%20Justice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Criminal%20Justice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Criminal Law">
+      <outline type="rss" text="Criminal Law" xmlUrl="https://news.google.com/rss/search?q=criminal%20law%20OR%20crime%20OR%20penal&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=criminal%20law%20OR%20crime%20OR%20penal&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Criminal Procedure">
+      <outline type="rss" text="Criminal Procedure" xmlUrl="https://news.google.com/rss/search?q=Criminal%20Procedure&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Criminal%20Procedure&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Deposition">
+      <outline type="rss" text="Deposition" xmlUrl="https://news.google.com/rss/search?q=deposition&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=deposition&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Disability Law">
+      <outline type="rss" text="Disability Law" xmlUrl="https://news.google.com/rss/search?q=Disability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Disability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Discrimination">
+      <outline type="rss" text="Discrimination" xmlUrl="https://news.google.com/rss/search?q=Discrimination%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Discrimination%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Domestic Violence">
+      <outline type="rss" text="Domestic Violence" xmlUrl="https://news.google.com/rss/search?q=Domestic%20Violence%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Domestic%20Violence%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Economics Law">
+      <outline type="rss" text="Economics Law" xmlUrl="https://news.google.com/rss/search?q=Economics%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Economics%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Education Law">
+      <outline type="rss" text="Education Law" xmlUrl="https://news.google.com/rss/search?q=Education%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Education%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Elder Law">
+      <outline type="rss" text="Elder Law" xmlUrl="https://news.google.com/rss/search?q=Elder%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Elder%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Election Law">
+      <outline type="rss" text="Election Law" xmlUrl="https://news.google.com/rss/search?q=Election%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Election%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Employee Benefits">
+      <outline type="rss" text="Employee Benefits" xmlUrl="https://news.google.com/rss/search?q=Employee%20Benefits%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Employee%20Benefits%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Employment Discrimination">
+      <outline type="rss" text="Employment Discrimination" xmlUrl="https://news.google.com/rss/search?q=Employment%20Discrimination%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Employment%20Discrimination%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Employment Law">
+      <outline type="rss" text="Employment Law" xmlUrl="https://news.google.com/rss/search?q=employment%20law%20OR%20employer%20employee&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=employment%20law%20OR%20employer%20employee&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Energy Law">
+      <outline type="rss" text="Energy Law" xmlUrl="https://news.google.com/rss/search?q=Energy%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Energy%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Entertainment Law">
+      <outline type="rss" text="Entertainment Law" xmlUrl="https://news.google.com/rss/search?q=Entertainment%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Entertainment%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Environmental Law">
+      <outline type="rss" text="Environmental Law" xmlUrl="https://news.google.com/rss/search?q=Environmental%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Environmental%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Estate Planning and Probate">
+      <outline type="rss" text="Estate Planning and Probate" xmlUrl="https://news.google.com/rss/search?q=Wills%20Probate&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Wills%20Probate&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Estate Planning and Probate" xmlUrl="https://news.google.com/rss/search?q=Estate%20Planning%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Estate%20Planning%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Estate Planning and Probate" xmlUrl="https://news.google.com/rss/search?q=Gift%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Gift%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Estate Planning and Probate" xmlUrl="https://news.google.com/rss/search?q=Probate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Probate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Estate Planning and Probate" xmlUrl="https://news.google.com/rss/search?q=Trust%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Trust%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Evidence">
+      <outline type="rss" text="Evidence" xmlUrl="https://news.google.com/rss/search?q=Evidence%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Evidence%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Family Law">
+      <outline type="rss" text="Family Law" xmlUrl="https://news.google.com/rss/search?q=Family%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Family%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Federal Court News">
+      <outline type="rss" text="Federal Court News" xmlUrl="https://news.google.com/rss/search?q=Federal%20Court&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Federal%20Court&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Federal Litigation">
+      <outline type="rss" text="Federal Litigation" xmlUrl="https://news.google.com/rss/search?q=Federal%20Litigation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Federal%20Litigation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Fraud">
+      <outline type="rss" text="Fraud" xmlUrl="https://news.google.com/rss/search?q=Fraud%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Fraud%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Gaming Law">
+      <outline type="rss" text="Gaming Law" xmlUrl="https://news.google.com/rss/search?q=Gaming%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Gaming%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="General Law Practice">
+      <outline type="rss" text="General Law Practice" xmlUrl="https://news.google.com/rss/search?q=General%20Practice%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=General%20Practice%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Government Contracts">
+      <outline type="rss" text="Government Contracts" xmlUrl="https://news.google.com/rss/search?q=Government%20Contract&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Government%20Contract&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Government Law">
+      <outline type="rss" text="Government Law" xmlUrl="https://news.google.com/rss/search?q=Government%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Government%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Guns - Gun Control">
+      <outline type="rss" text="Guns - Gun Control" xmlUrl="https://news.google.com/rss/search?q=gun%20control&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=gun%20control&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Guns - Shooting">
+      <outline type="rss" text="Guns - Shooting" xmlUrl="https://news.google.com/rss/search?q=shooting&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=shooting&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Health Care Law">
+      <outline type="rss" text="Health Care Law" xmlUrl="https://news.google.com/rss/search?q=Health%20Care%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Health%20Care%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Human Rights Law">
+      <outline type="rss" text="Human Rights Law" xmlUrl="https://news.google.com/rss/search?q=Human%20Rights%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Human%20Rights%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Immigration Law">
+      <outline type="rss" text="Immigration Law" xmlUrl="https://news.google.com/rss/search?q=Immigration%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Immigration%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Insurance Law">
+      <outline type="rss" text="Insurance Law" xmlUrl="https://news.google.com/rss/search?q=Insurance%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Insurance%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Intellectual Property">
+      <outline type="rss" text="Intellectual Property" xmlUrl="https://news.google.com/rss/search?q=Intellectual%20Property&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Intellectual%20Property&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="International Law">
+      <outline type="rss" text="International Law" xmlUrl="https://news.google.com/rss/search?q=International%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=International%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Internet Law">
+      <outline type="rss" text="Internet Law" xmlUrl="https://news.google.com/rss/search?q=Internet%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Internet%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Islamic Law">
+      <outline type="rss" text="Islamic Law" xmlUrl="https://news.google.com/rss/search?q=Islamic%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Islamic%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Jewish Law">
+      <outline type="rss" text="Jewish Law" xmlUrl="https://news.google.com/rss/search?q=Jewish%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Jewish%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Judicial Systems">
+      <outline type="rss" text="Judicial Systems" xmlUrl="https://news.google.com/rss/search?q=Judicial%20System&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Judicial%20System&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Jurisprudence">
+      <outline type="rss" text="Jurisprudence" xmlUrl="https://news.google.com/rss/search?q=Jurisprudence&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Jurisprudence&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Jury Instructions">
+      <outline type="rss" text="Jury Instructions" xmlUrl="https://news.google.com/rss/search?q=Jury%20Instruction&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Jury%20Instruction&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Juvenile Law">
+      <outline type="rss" text="Juvenile Law" xmlUrl="https://news.google.com/rss/search?q=Juvenile%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Juvenile%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Labor Law">
+      <outline type="rss" text="Labor Law" xmlUrl="https://news.google.com/rss/search?q=Labor%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Labor%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Land Use Law">
+      <outline type="rss" text="Land Use Law" xmlUrl="https://news.google.com/rss/search?q=Land%20Use%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Land%20Use%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Law Enforcement">
+      <outline type="rss" text="Law Enforcement" xmlUrl="https://news.google.com/rss/search?q=Law%20Enforcement&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Law%20Enforcement&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Law Office Management">
+      <outline type="rss" text="Law Office Management" xmlUrl="https://news.google.com/rss/search?q=Law%20Office%20Management&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Law%20Office%20Management&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Law Practice">
+      <outline type="rss" text="Law Practice" xmlUrl="https://news.google.com/rss/search?q=Law%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Law%20Practice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Law School">
+      <outline type="rss" text="Law School" xmlUrl="https://news.google.com/rss/search?q=Law%20School&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Law%20School&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Lawyer">
+      <outline type="rss" text="Lawyer" xmlUrl="https://news.google.com/rss/search?q=Lawyer&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Lawyer&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Legal History">
+      <outline type="rss" text="Legal History" xmlUrl="https://news.google.com/rss/search?q=legal%20history%20OR%20history%20of%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=legal%20history%20OR%20history%20of%20law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Legal Process">
+      <outline type="rss" text="Legal Process" xmlUrl="https://news.google.com/rss/search?q=Legal%20Process&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Legal%20Process&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Legal Research">
+      <outline type="rss" text="Legal Research" xmlUrl="https://news.google.com/rss/search?q=Legal%20Research&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Legal%20Research&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Legal Writing">
+      <outline type="rss" text="Legal Writing" xmlUrl="https://news.google.com/rss/search?q=Legal%20Writing&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Legal%20Writing&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Legislative Law">
+      <outline type="rss" text="Legislative Law" xmlUrl="https://news.google.com/rss/search?q=legislative%20law%20OR%20Legislation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=legislative%20law%20OR%20Legislation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Liability Law">
+      <outline type="rss" text="Liability Law" xmlUrl="https://news.google.com/rss/search?q=Liability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Liability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Litigation">
+      <outline type="rss" text="Litigation" xmlUrl="https://news.google.com/rss/search?q=Litigation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Litigation&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Media Law">
+      <outline type="rss" text="Media Law" xmlUrl="https://news.google.com/rss/search?q=Media%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Media%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Medical Malpractice">
+      <outline type="rss" text="Medical Malpractice" xmlUrl="https://news.google.com/rss/search?q=Medical%20Malpractice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Medical%20Malpractice&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Mental Disability">
+      <outline type="rss" text="Mental Disability" xmlUrl="https://news.google.com/rss/search?q=Mental%20Disability&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Mental%20Disability&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Mergers and Acquisitions">
+      <outline type="rss" text="Mergers and Acquisitions" xmlUrl="https://news.google.com/rss/search?q=Mergers%20OR%20Acquisitions&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Mergers%20OR%20Acquisitions&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Military Law">
+      <outline type="rss" text="Military Law" xmlUrl="https://news.google.com/rss/search?q=Military%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Military%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Motor Vehicle and Traffic Law">
+      <outline type="rss" text="Motor Vehicle and Traffic Law" xmlUrl="https://news.google.com/rss/search?q=Motor%20Vehicle%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Motor%20Vehicle%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Native American Law">
+      <outline type="rss" text="Native American Law" xmlUrl="https://news.google.com/rss/search?q=Native%20American%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Native%20American%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Negotiation">
+      <outline type="rss" text="Negotiation" xmlUrl="https://news.google.com/rss/search?q=Negotiation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Negotiation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Partnership Law">
+      <outline type="rss" text="Partnership Law" xmlUrl="https://news.google.com/rss/search?q=Partnership%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Partnership%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Patent Law">
+      <outline type="rss" text="Patent Law" xmlUrl="https://news.google.com/rss/search?q=Patent%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Patent%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Personal Injury Law">
+      <outline type="rss" text="Personal Injury Law" xmlUrl="https://news.google.com/rss/search?q=Personal%20Injury%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Personal%20Injury%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Podcasts">
+      <outline type="rss" text="Podcasts" xmlUrl="https://news.google.com/rss/search?q=Podcasts%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Podcasts%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Politics">
+      <outline type="rss" text="Politics" xmlUrl="https://news.google.com/rss/search?q=politics&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=politics&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Popular Culture Law">
+      <outline type="rss" text="Popular Culture Law" xmlUrl="https://news.google.com/rss/search?q=Popular%20Culture%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Popular%20Culture%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Products Liability">
+      <outline type="rss" text="Products Liability" xmlUrl="https://news.google.com/rss/search?q=Products%20Liability&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Products%20Liability&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Professional Responsibility">
+      <outline type="rss" text="Professional Responsibility" xmlUrl="https://news.google.com/rss/search?q=Ethics%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Ethics%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Professional Responsibility" xmlUrl="https://news.google.com/rss/search?q=Professional%20Responsibility&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Professional%20Responsibility&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+      <outline type="rss" text="Professional Responsibility" xmlUrl="https://news.google.com/rss/search?q=Professional%20Responsibility%20OR%20Legal%20Ethics&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Professional%20Responsibility%20OR%20Legal%20Ethics&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Property Law">
+      <outline type="rss" text="Property Law" xmlUrl="https://news.google.com/rss/search?q=property%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=property%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Publications">
+      <outline type="rss" text="Publications" xmlUrl="https://news.google.com/rss/search?q=Pablications%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Pablications%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Quotes">
+      <outline type="rss" text="Quotes" xmlUrl="https://news.google.com/rss/search?q=Quates%20Lawyer%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Quates%20Lawyer%20Attorney%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Real Estate Law">
+      <outline type="rss" text="Real Estate Law" xmlUrl="https://news.google.com/rss/search?q=Real%20Estate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Real%20Estate%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Regulatory Law">
+      <outline type="rss" text="Regulatory Law" xmlUrl="https://news.google.com/rss/search?q=Regulatory%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Regulatory%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Remedies Law">
+      <outline type="rss" text="Remedies Law" xmlUrl="https://news.google.com/rss/search?q=Remedies%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Remedies%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Securities Law">
+      <outline type="rss" text="Securities Law" xmlUrl="https://news.google.com/rss/search?q=Securities%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Securities%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Social Security Disability">
+      <outline type="rss" text="Social Security Disability Law" xmlUrl="https://news.google.com/rss/search?q=Social%20Security%20Disability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Social%20Security%20Disability%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Sports Law">
+      <outline type="rss" text="Sports Law" xmlUrl="https://news.google.com/rss/search?q=Sports%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Sports%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="State and Local Government Law">
+      <outline type="rss" text="State and Local Government Law" xmlUrl="https://news.google.com/rss/search?q=State%20Government%20Law%20OR%20Local%20Government%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=State%20Government%20Law%20OR%20Local%20Government%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Statutes">
+      <outline type="rss" text="Statutes" xmlUrl="https://news.google.com/rss/search?q=Statutes&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Statutes&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Tax Law">
+      <outline type="rss" text="Tax Law" xmlUrl="https://news.google.com/rss/search?q=Tax%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Tax%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Technology Law">
+      <outline type="rss" text="Technology Law" xmlUrl="https://news.google.com/rss/search?q=Technology%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Technology%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Terrorism Law">
+      <outline type="rss" text="Terrorism Law" xmlUrl="https://news.google.com/rss/search?q=Terrorism%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Terrorism%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Top News">
+      <outline type="rss" text="Top News" xmlUrl="https://news.google.com/rss?hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/?hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Tort Law">
+      <outline type="rss" text="Tort Law" xmlUrl="https://news.google.com/rss/search?q=Tort%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Tort%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Trade Law">
+      <outline type="rss" text="Trade Law" xmlUrl="https://news.google.com/rss/search?q=Trade%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Trade%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Trademarks">
+      <outline type="rss" text="Trademarks" xmlUrl="https://news.google.com/rss/search?q=Trademark%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Trademark%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Transportation Law">
+      <outline type="rss" text="Transportation Law" xmlUrl="https://news.google.com/rss/search?q=Transportation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Transportation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Trial and Advocacy">
+      <outline type="rss" text="Trial and Advocacy" xmlUrl="https://news.google.com/rss/search?q=Trial%20Advocacy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Trial%20Advocacy&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  1st Amendment">
+      <outline type="rss" text="US Constitution -  1st Amendment" xmlUrl="https://news.google.com/rss/search?q=1st%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=1st%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  2nd Amendment">
+      <outline type="rss" text="US Constitution -   2nd Amendment" xmlUrl="https://news.google.com/rss/search?q=2nd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=2nd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  3rd Amendment">
+      <outline type="rss" text="US Constitution -  3rd Amendment" xmlUrl="https://news.google.com/rss/search?q=3rd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=3rd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  4th Amendment">
+      <outline type="rss" text="US Constitution -  4th Amendment" xmlUrl="https://news.google.com/rss/search?q=4th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=4th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  5th Amendment">
+      <outline type="rss" text="US Constitution -  5th Amendment" xmlUrl="https://news.google.com/rss/search?q=5th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=5th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  6th Amendment">
+      <outline type="rss" text="US Constitution -  6th Amendment" xmlUrl="https://news.google.com/rss/search?q=6th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=6th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  7th Amendment">
+      <outline type="rss" text="US Constitution -  7th Amendment" xmlUrl="https://news.google.com/rss/search?q=7th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=7th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  8th Amendment">
+      <outline type="rss" text="US Constitution -  8th Amendment" xmlUrl="https://news.google.com/rss/search?q=8th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=8th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution -  9th Amendment">
+      <outline type="rss" text="US Constitution -  9th Amendment" xmlUrl="https://news.google.com/rss/search?q=9th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=9th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 10th Amendment">
+      <outline type="rss" text="US Constitution -  10th Amendment" xmlUrl="https://news.google.com/rss/search?q=10th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=10th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 11th Amendment">
+      <outline type="rss" text="US Constitution -  11th Amendment" xmlUrl="https://news.google.com/rss/search?q=11th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=11th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 12th Amendment">
+      <outline type="rss" text="US Constitution -  12th Amendment" xmlUrl="https://news.google.com/rss/search?q=12th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=12th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 13th Amendment">
+      <outline type="rss" text="US Constitution -  13th Amendment" xmlUrl="https://news.google.com/rss/search?q=13th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=13th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 14th Amendment">
+      <outline type="rss" text="US Constitution -  14th Amendment" xmlUrl="https://news.google.com/rss/search?q=14th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=14th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 15th Amendment">
+      <outline type="rss" text="US Constitution -  15th Amendment" xmlUrl="https://news.google.com/rss/search?q=15th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=15th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 16th Amendment">
+      <outline type="rss" text="US Constitution -  16th Amendment" xmlUrl="https://news.google.com/rss/search?q=16th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=16th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 17th Amendment">
+      <outline type="rss" text="US Constitution -  17th Amendment" xmlUrl="https://news.google.com/rss/search?q=17th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=17th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 18th Amendment">
+      <outline type="rss" text="US Constitution -  18th Amendment" xmlUrl="https://news.google.com/rss/search?q=18th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=18th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 19th Amendment">
+      <outline type="rss" text="US Constitution -  19th Amendment" xmlUrl="https://news.google.com/rss/search?q=19th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=19th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 20th Amendment">
+      <outline type="rss" text="US Constitution -  20th Amendment" xmlUrl="https://news.google.com/rss/search?q=20th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=20th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 21st Amendment">
+      <outline type="rss" text="US Constitution -  21st Amendment" xmlUrl="https://news.google.com/rss/search?q=21st%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=21st%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 22nd Amendment">
+      <outline type="rss" text="US Constitution -  22nd Amendment" xmlUrl="https://news.google.com/rss/search?q=22nd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=22nd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 23rd Amendment">
+      <outline type="rss" text="US Constitution -  23rd Amendment" xmlUrl="https://news.google.com/rss/search?q=23rd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=23rd%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 24th Amendment">
+      <outline type="rss" text="US Constitution -  24th Amendment" xmlUrl="https://news.google.com/rss/search?q=24th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=24th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 25th Amendment">
+      <outline type="rss" text="US Constitution -  25th Amendment" xmlUrl="https://news.google.com/rss/search?q=25th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=25th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 26th Amendment">
+      <outline type="rss" text="US Constitution -  26th Amendment" xmlUrl="https://news.google.com/rss/search?q=26th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=26th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - 27th Amendment">
+      <outline type="rss" text="US Constitution -  27th Amendment" xmlUrl="https://news.google.com/rss/search?q=27th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=27th%20amendment&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 1">
+      <outline type="rss" text="US Constitution - Article 1" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%201&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%201&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 2">
+      <outline type="rss" text="US Constitution - Article 2" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%202&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%202&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 3">
+      <outline type="rss" text="US Constitution - Article 3" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%203&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%203&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 4">
+      <outline type="rss" text="US Constitution - Article 4" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%204&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%204&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 5">
+      <outline type="rss" text="US Constitution - Article 5" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%205&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%205&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 6">
+      <outline type="rss" text="US Constitution - Article 6" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%206&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%206&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Constitution - Article 7">
+      <outline type="rss" text="US Constitution - Article 7" xmlUrl="https://news.google.com/rss/search?q=constitution%20article%207&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=constitution%20article%207&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 10th Circuit">
+      <outline type="rss" text="US Court of Appeals - 10th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%2010th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%2010th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 11th Circuit">
+      <outline type="rss" text="US Court of Appeals - 11th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%2011th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%2011th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 1st Circuit">
+      <outline type="rss" text="US Court of Appeals - 1st Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%201st%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%201st%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 2nd Circuit">
+      <outline type="rss" text="US Court of Appeals - 2nd Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%202nd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%202nd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 3rd Circuit">
+      <outline type="rss" text="US Court of Appeals - 3rd Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%203rd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%203rd%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 4th Circuit">
+      <outline type="rss" text="US Court of Appeals - 4th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%204th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%204th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 5th Circuit">
+      <outline type="rss" text="US Court of Appeals - 5th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%205th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%205th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 6th Circuit">
+      <outline type="rss" text="US Court of Appeals - 6th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%206th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%206th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 7th Circuit">
+      <outline type="rss" text="US Court of Appeals - 7th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%207th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%207th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 8th Circuit">
+      <outline type="rss" text="US Court of Appeals - 8th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%208th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%208th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - 9th Circuit">
+      <outline type="rss" text="US Court of Appeals - 9th Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%209th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%209th%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - DC Circuit">
+      <outline type="rss" text="US Court of Appeals - DC Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%20DC%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%20DC%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Court of Appeals - Federal Circuit">
+      <outline type="rss" text="US Court of Appeals - Federal Circuit" xmlUrl="https://news.google.com/rss/search?q=U%20S%20Court%20of%20Appeals%20Federal%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=U%20S%20Court%20of%20Appeals%20Federal%20Circuit&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Supreme Court">
+      <outline type="rss" text="US Supreme Court" xmlUrl="https://news.google.com/rss/search?q=US%20Supreme%20Court&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=US%20Supreme%20Court&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="US Supreme Court Decisions">
+      <outline type="rss" text="US Supreme Court Decisions" xmlUrl="https://news.google.com/rss/search?q=US%20Supreme%20Court%20Decisions&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=US%20Supreme%20Court%20Decisions&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Utilities Law">
+      <outline type="rss" text="Utilities Law" xmlUrl="https://news.google.com/rss/search?q=Utilities%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Utilities%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Veterans Law">
+      <outline type="rss" text="Veterans Law" xmlUrl="https://news.google.com/rss/search?q=Veterans%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Veterans%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Voting Rights">
+      <outline type="rss" text="Voting Rights" xmlUrl="https://news.google.com/rss/search?q=Voting%20Rights%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Voting%20Rights%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Water Law">
+      <outline type="rss" text="Water Law" xmlUrl="https://news.google.com/rss/search?q=Water%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Water%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="White Collar Crime">
+      <outline type="rss" text="White Collar Crime" xmlUrl="https://news.google.com/rss/search?q=White%20Collar%20Crime&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=White%20Collar%20Crime&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="Workers Compensation">
+      <outline type="rss" text="Workers Compensation" xmlUrl="https://news.google.com/rss/search?q=Workers%20Compensation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" htmlUrl="https://news.google.com/search?q=Workers%20Compensation%20Law&amp;hl=en-US&amp;gl=US&amp;ceid=US:en" />
+    </outline>
+    <outline text="tt-rss-prefs" schema-version="147">
+      <outline pref-name="BLACKLISTED_TAGS" value="" />
+      <outline pref-name="CDM_EXPANDED" value="" />
+      <outline pref-name="COMBINED_DISPLAY_MODE" value="" />
+      <outline pref-name="CONFIRM_FEED_CATCHUP" value="" />
+      <outline pref-name="DEFAULT_SEARCH_LANGUAGE" value="Simple" />
+      <outline pref-name="DEFAULT_UPDATE_INTERVAL" value="60" />
+      <outline pref-name="ENABLE_API_ACCESS" value="1" />
+      <outline pref-name="HIDE_READ_SHOWS_SPECIAL" value="" />
+      <outline pref-name="PURGE_OLD_DAYS" value="30" />
+      <outline pref-name="PURGE_UNREAD_ARTICLES" value="" />
+      <outline pref-name="USER_CSS_THEME" value="" />
+      <outline pref-name="USER_LANGUAGE" value="en_US" />
+      <outline pref-name="_DEFAULT_VIEW_MODE" value="all_articles" />
+      <outline pref-name="_DEFAULT_VIEW_ORDER_BY" value="feed_dates" />
+      <outline pref-name="_ENABLED_PLUGINS" value="fever,no_iframes" />
+      <outline pref-name="_PREFS_MIGRATED" value="1" />
+    </outline>
+    <outline text="tt-rss-labels" schema-version="147" />
+    <outline text="tt-rss-filters" schema-version="147" />
+  </body>
+</opml>
