@@ -194,13 +194,13 @@ struct MiniPlayerBar: View {
                     }
                     Spacer()
                     Button { player.skip(by: -player.skipBack) } label: {
-                        Image(systemName: "gobackward.10").font(.title3)
+                        Image(systemName: player.skipBackSymbol).font(.title3)
                     }
                     Button { player.togglePlayPause() } label: {
                         Image(systemName: player.isPlaying ? "pause.fill" : "play.fill").font(.title2)
                     }
                     Button { player.skip(by: player.skipForward) } label: {
-                        Image(systemName: "goforward.30").font(.title3)
+                        Image(systemName: player.skipForwardSymbol).font(.title3)
                     }
                 }
                 .buttonStyle(.borderless)

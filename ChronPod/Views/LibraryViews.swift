@@ -133,7 +133,7 @@ struct NowPlayingView: View {
 
                     HStack(spacing: 44) {
                         Button { player.skip(by: -player.skipBack) } label: {
-                            Image(systemName: "gobackward.10").font(.system(size: 34))
+                            Image(systemName: player.skipBackSymbol).font(.system(size: 34))
                         }
                         Button { player.togglePlayPause() } label: {
                             Image(systemName: player.isPlaying ? "pause.circle.fill" : "play.circle.fill")
@@ -141,7 +141,7 @@ struct NowPlayingView: View {
                                 .foregroundStyle(Theme.accent)
                         }
                         Button { player.skip(by: player.skipForward) } label: {
-                            Image(systemName: "goforward.30").font(.system(size: 34))
+                            Image(systemName: player.skipForwardSymbol).font(.system(size: 34))
                         }
                     }
                     .foregroundStyle(.primary)
@@ -207,6 +207,12 @@ struct SettingsView: View {
     @State private var showTopics = false
     @State private var exportURL: URL?
     @State private var working = false
+    @AppStorage("deleteAfterPlaying") private var deleteAfterPlaying = false
+    @AppStorage(DiscoverPrefs.countryKey) private var country = DiscoverPrefs.defaultCountry
+    @AppStorage(DiscoverPrefs.showOnHomeKey) private var showDiscover = true
+    @AppStorage(DiscoverPrefs.fyydKey) private var useFyyd = true
+    @AppStorage(DiscoverPrefs.podcastIndexKeyKey) private var piKey = ""
+    @AppStorage(DiscoverPrefs.podcastIndexSecretKey) private var piSecret = ""
 
     private static let opmlType = UTType(filenameExtension: "opml") ?? .xml
 
@@ -253,8 +259,44 @@ struct SettingsView: View {
                         Text(PlayerController.rateLabel(r)).tag(r)
                     }
                 }
-                LabeledContent("Skip back", value: "\(Int(player.skipBack)) seconds")
-                LabeledContent("Skip forward", value: "\(Int(player.skipForward)) seconds")
+                Picker("Skip back", selection: $player.skipBack) {
+                    ForEach(PlayerController.skipChoices, id: \.self) { s in Text("\(Int(s)) seconds").tag(s) }
+                }
+                Picker("Skip forward", selection: $player.skipForward) {
+                    ForEach(PlayerController.skipChoices, id: \.self) { s in Text("\(Int(s)) seconds").tag(s) }
+                }
+            }
+
+            Section {
+                NavigationLink { DownloadsView() } label: { Label("Downloads", systemImage: "arrow.down.circle") }
+                Toggle("Delete downloads after playing", isOn: $deleteAfterPlaying)
+            } header: {
+                Text("Downloads")
+            } footer: {
+                Text("To download new episodes automatically, open a podcast and choose Auto-Download from its ••• menu.")
+            }
+
+            Section {
+                Toggle("Show Discover on Home", isOn: $showDiscover)
+                Picker("Top podcasts country", selection: $country) {
+                    ForEach(Discovery.countries, id: \.code) { c in Text(c.name).tag(c.code) }
+                }
+                Toggle("Also search fyyd", isOn: $useFyyd)
+            } header: {
+                Text("Discover & Search")
+            } footer: {
+                Text("Search always includes Apple Podcasts. fyyd is a free, independent podcast directory.")
+            }
+
+            Section {
+                TextField("API key", text: $piKey)
+                    .textInputAutocapitalization(.never).autocorrectionDisabled()
+                SecureField("API secret", text: $piSecret)
+                Link("Get a free key at podcastindex.org", destination: URL(string: "https://api.podcastindex.org/signup")!)
+            } header: {
+                Text("Podcast Index (optional)")
+            } footer: {
+                Text("Podcast Index is an open podcast directory. Search uses it too once you enter your own free key and secret.")
             }
 
             Section("About") {
@@ -283,6 +325,101 @@ struct SettingsView: View {
                     library.message = error.localizedDescription
                 }
             }
+        }
+    }
+}
+
+/// Every episode across all podcasts, with filters (AntennaPod: AllEpisodesFragment).
+struct EpisodesView: View {
+    @EnvironmentObject private var library: LibraryStore
+    @EnvironmentObject private var downloads: DownloadManager
+    @State private var filter = Filter.unplayed
+    @State private var search = ""
+
+    enum Filter: String, CaseIterable, Identifiable {
+        case all = "All", unplayed = "Unplayed", inProgress = "In Progress", downloaded = "Downloaded",
+             favorites = "Favorites"
+        var id: String { rawValue }
+    }
+
+    private var shown: [Episode] {
+        let q = search.trimmingCharacters(in: .whitespaces).lowercased()
+        return library.allEpisodes
+            .filter { ep in
+                guard ep.hasMedia else { return false }
+                switch filter {
+                case .all: break
+                case .unplayed: if library.isPlayed(ep) { return false }
+                case .inProgress: if library.position(of: ep) <= 0 { return false }
+                case .downloaded: if !downloads.isDownloaded(ep) { return false }
+                case .favorites: if !library.isFavorite(ep) { return false }
+                }
+                if q.isEmpty { return true }
+                return ep.title.lowercased().contains(q)
+                    || (library.podcast(ep.podcastID)?.title.lowercased().contains(q) ?? false)
+            }
+            .sorted { ($0.pubDate ?? .distantPast) > ($1.pubDate ?? .distantPast) }
+            .prefix(300).map { $0 }
+    }
+
+    var body: some View {
+        List {
+            Picker("Show", selection: $filter) {
+                ForEach(Filter.allCases) { Text($0.rawValue).tag($0) }
+            }
+            .pickerStyle(.menu)
+
+            let list = shown
+            if list.isEmpty {
+                Text(emptyText).font(.footnote).foregroundStyle(.secondary)
+            }
+            ForEach(list) { ep in
+                EpisodeLink(episode: ep)
+                    .swipeActions(edge: .leading) {
+                        Button {
+                            if library.isQueued(ep) { library.dequeue(ep.id) } else { library.enqueue(ep) }
+                        } label: {
+                            Label(library.isQueued(ep) ? "Unqueue" : "Queue", systemImage: "text.badge.plus")
+                        }
+                        .tint(.blue)
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button {
+                            library.setPlayed(ep, !library.isPlayed(ep))
+                        } label: {
+                            Label(library.isPlayed(ep) ? "Unplayed" : "Played", systemImage: "checkmark.circle")
+                        }
+                        .tint(.green)
+                        Button {
+                            library.toggleFavorite(ep)
+                        } label: {
+                            Label("Favorite", systemImage: library.isFavorite(ep) ? "star.slash" : "star")
+                        }
+                        .tint(.orange)
+                    }
+            }
+        }
+        .navigationTitle("Episodes")
+        .searchable(text: $search, prompt: "Search episodes")
+        .refreshable { await library.refreshAll() }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                NavigationLink {
+                    DownloadsView()
+                } label: {
+                    Label("Downloads", systemImage: "arrow.down.circle")
+                }
+            }
+        }
+    }
+
+    private var emptyText: String {
+        switch filter {
+        case .all: return "No podcast episodes yet. Subscribe to podcasts with the + button on Home."
+        case .unplayed: return "You're all caught up."
+        case .inProgress: return "Episodes you have started appear here."
+        case .downloaded: return "Downloaded episodes appear here."
+        case .favorites: return "Swipe left on an episode and tap Favorite to keep it here."
         }
     }
 }

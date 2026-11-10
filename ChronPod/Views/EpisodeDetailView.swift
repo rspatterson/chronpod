@@ -44,6 +44,10 @@ struct EpisodeDetailView: View {
             .toolbar {
                 Menu {
                     if ep.hasMedia {
+                        Button { library.toggleFavorite(ep) } label: {
+                            Label(library.isFavorite(ep) ? "Remove from Favorites" : "Add to Favorites",
+                                  systemImage: library.isFavorite(ep) ? "star.slash" : "star")
+                        }
                         Button { library.setPlayed(ep, !library.isPlayed(ep)) } label: {
                             Label(library.isPlayed(ep) ? "Mark as Unplayed" : "Mark as Played",
                                   systemImage: library.isPlayed(ep) ? "circle" : "checkmark.circle")

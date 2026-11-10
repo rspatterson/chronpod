@@ -32,8 +32,30 @@ final class PlayerController: ObservableObject {
         if r * 10 == (r * 10).rounded() { return String(format: "%.1fx", r) }
         return String(format: "%.2fx", r)
     }
-    let skipBack: Double = 10
-    let skipForward: Double = 30
+    /// Skip intervals offered in Settings (each has a matching SF Symbol, e.g. "gobackward.15").
+    static let skipChoices: [Double] = [5, 10, 15, 30, 45, 60]
+
+    @Published var skipBack: Double = PlayerController.storedSkip("skipBack", default: 10) {
+        didSet {
+            UserDefaults.standard.set(skipBack, forKey: "skipBack")
+            MPRemoteCommandCenter.shared().skipBackwardCommand.preferredIntervals = [NSNumber(value: skipBack)]
+        }
+    }
+    @Published var skipForward: Double = PlayerController.storedSkip("skipForward", default: 30) {
+        didSet {
+            UserDefaults.standard.set(skipForward, forKey: "skipForward")
+            MPRemoteCommandCenter.shared().skipForwardCommand.preferredIntervals = [NSNumber(value: skipForward)]
+        }
+    }
+
+    nonisolated private static func storedSkip(_ key: String, default value: Double) -> Double {
+        let v = UserDefaults.standard.double(forKey: key)
+        return v > 0 ? v : value
+    }
+
+    /// "gobackward.10" / "goforward.30" for the current settings.
+    var skipBackSymbol: String { "gobackward.\(Int(skipBack))" }
+    var skipForwardSymbol: String { "goforward.\(Int(skipForward))" }
 
     private let player = AVPlayer()
     private var timeObserver: Any?
@@ -194,6 +216,9 @@ final class PlayerController: ObservableObject {
     private func episodeEnded() {
         guard let ep = current else { return }
         let next = library?.finished(ep.id)
+        if UserDefaults.standard.bool(forKey: "deleteAfterPlaying") {
+            downloads?.delete(ep)
+        }
         if sleepAtEndOfEpisode {
             sleepAtEndOfEpisode = false
             stop()

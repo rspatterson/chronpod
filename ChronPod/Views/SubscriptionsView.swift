@@ -129,6 +129,15 @@ struct PodcastDetailView: View {
                     Button { Task { await library.refresh(p) } } label: {
                         Label("Refresh", systemImage: "arrow.clockwise")
                     }
+                    if p.directoryCategory == nil {
+                        Toggle(isOn: Binding(get: { library.isAutoDownload(p.id) },
+                                             set: { library.setAutoDownload(p.id, $0) })) {
+                            Label("Auto-Download New Episodes", systemImage: "arrow.down.circle")
+                        }
+                        Button { library.markAllPlayed(p.id) } label: {
+                            Label("Mark All as Played", systemImage: "checkmark.circle")
+                        }
+                    }
                     if let link = p.link, let url = URL(string: link) {
                         Link(destination: url) { Label("Open Website", systemImage: "safari") }
                     }
@@ -153,61 +162,105 @@ struct PodcastDetailView: View {
     }
 }
 
-/// Search the podcast directory, or add any RSS/Atom feed by its address.
+/// Add Podcast: search several directories at once, browse Apple's top charts, open ChronLaw topics,
+/// or add a feed by its address (AntennaPod: AddFeedFragment + DiscoveryFragment + SearchResultsFragment).
 struct AddPodcastView: View {
     @EnvironmentObject private var library: LibraryStore
     @Environment(\.dismiss) private var dismiss
+    @AppStorage(DiscoverPrefs.fyydKey) private var useFyyd = true
+    @AppStorage(DiscoverPrefs.podcastIndexKeyKey) private var piKey = ""
+    @AppStorage(DiscoverPrefs.podcastIndexSecretKey) private var piSecret = ""
     @State private var query = ""
-    @State private var results: [PodcastSearchResult] = []
+    @State private var results: [DiscoveredPodcast] = []
+    @State private var searched = false
     @State private var searching = false
     @State private var feedAddress = ""
-    @State private var adding: String?
+    @State private var adding = false
     @State private var error: String?
+    @State private var showTopics = false
+
+    private var providers: String {
+        var list = ["Apple Podcasts"]
+        if useFyyd { list.append("fyyd") }
+        if !piKey.isEmpty && !piSecret.isEmpty { list.append("Podcast Index") }
+        return list.joined(separator: ", ")
+    }
 
     var body: some View {
         NavigationStack {
             List {
                 Section {
                     HStack {
+                        Image(systemName: "magnifyingglass").foregroundStyle(.secondary)
                         TextField("Search podcasts", text: $query)
                             .textInputAutocapitalization(.never)
+                            .autocorrectionDisabled()
                             .submitLabel(.search)
                             .onSubmit { Task { await search() } }
                         if searching { ProgressView() }
+                        else if !query.isEmpty {
+                            Button { query = ""; results = []; searched = false } label: {
+                                Image(systemName: "xmark.circle.fill").foregroundStyle(.secondary)
+                            }
+                            .buttonStyle(.borderless)
+                        }
                     }
-                } header: {
-                    Text("Search")
                 } footer: {
-                    Text("Searches Apple's public podcast directory.")
+                    Text("Searches \(providers).")
                 }
 
-                if !results.isEmpty {
-                    Section("Results") {
+                if searched {
+                    Section("Search Results") {
+                        if results.isEmpty && !searching {
+                            Text("No podcasts found for \"\(query)\".").font(.footnote).foregroundStyle(.secondary)
+                        }
                         ForEach(results) { r in
-                            HStack(spacing: 12) {
-                                ArtworkView(url: r.imageURL, size: 48)
-                                VStack(alignment: .leading) {
-                                    Text(r.title).font(.subheadline.weight(.semibold)).lineLimit(2)
-                                    if let a = r.author { Text(a).font(.caption).foregroundStyle(.secondary) }
+                            NavigationLink {
+                                PodcastPreviewView(item: r)
+                            } label: {
+                                HStack(spacing: 12) {
+                                    ArtworkView(url: r.imageURL, size: 48)
+                                    VStack(alignment: .leading, spacing: 2) {
+                                        Text(r.title).font(.subheadline.weight(.semibold)).lineLimit(2)
+                                        Text([r.author, r.source].compactMap { $0 }.joined(separator: " · "))
+                                            .font(.caption).foregroundStyle(.secondary).lineLimit(1)
+                                    }
+                                    Spacer()
+                                    if let f = r.feedURL, library.isSubscribed(FeedFetcher.normalize(f)) {
+                                        Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
+                                    }
                                 }
-                                Spacer()
-                                addButton(url: r.feedURL, title: r.title)
                             }
                         }
                     }
                 }
 
                 Section {
+                    Button { showTopics = true } label: {
+                        Label("ChronLaw Legal News Topics", systemImage: "building.columns")
+                    }
+                }
+
+                TopPodcastsSection()
+
+                Section {
                     TextField("https://example.com/feed.xml", text: $feedAddress)
                         .keyboardType(.URL)
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
-                    Button("Add Feed") { add(url: feedAddress, title: nil) }
-                        .disabled(feedAddress.trimmingCharacters(in: .whitespaces).isEmpty || adding != nil)
+                    Button {
+                        add()
+                    } label: {
+                        HStack {
+                            Text("Add Feed")
+                            if adding { Spacer(); ProgressView() }
+                        }
+                    }
+                    .disabled(feedAddress.trimmingCharacters(in: .whitespaces).isEmpty || adding)
                 } header: {
                     Text("Add by address")
                 } footer: {
-                    Text("Any podcast or news RSS/Atom feed works, including Google News searches.")
+                    Text("Any podcast or news RSS/Atom feed works, including Google News searches. To move your subscriptions from AntennaPod or another app, use Settings → Import OPML File.")
                 }
 
                 if let error {
@@ -219,20 +272,7 @@ struct AddPodcastView: View {
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) { Button("Close") { dismiss() } }
             }
-        }
-    }
-
-    @ViewBuilder
-    private func addButton(url: String, title: String) -> some View {
-        if library.isSubscribed(FeedFetcher.normalize(url)) {
-            Image(systemName: "checkmark.circle.fill").foregroundStyle(.green)
-        } else if adding == url {
-            ProgressView()
-        } else {
-            Button { add(url: url, title: title) } label: {
-                Image(systemName: "plus.circle.fill").font(.title2).foregroundStyle(Theme.accent)
-            }
-            .buttonStyle(.borderless)
+            .sheet(isPresented: $showTopics) { TopicPickerView() }
         }
     }
 
@@ -241,26 +281,28 @@ struct AddPodcastView: View {
         guard !q.isEmpty else { return }
         searching = true
         error = nil
-        defer { searching = false }
-        do {
-            results = try await PodcastSearch.search(q)
-            if results.isEmpty { error = "No podcasts found for \"\(q)\"." }
-        } catch {
-            self.error = error.localizedDescription
-        }
+        let outcome = await Discovery.searchAll(q, useFyyd: useFyyd,
+                                                podcastIndexKey: piKey.isEmpty ? nil : piKey,
+                                                podcastIndexSecret: piSecret.isEmpty ? nil : piSecret)
+        results = outcome.results
+        searched = true
+        searching = false
+        if results.isEmpty, let first = outcome.errors.first { error = first }
     }
 
-    private func add(url: String, title: String?) {
-        adding = url
+    private func add() {
+        let address = feedAddress
+        adding = true
         error = nil
         Task {
             do {
-                try await library.subscribe(url: url, title: title)
-                if title == nil { feedAddress = "" }
+                try await library.subscribe(url: address)
+                feedAddress = ""
+                library.message = "Subscribed."
             } catch {
                 self.error = error.localizedDescription
             }
-            adding = nil
+            adding = false
         }
     }
 }

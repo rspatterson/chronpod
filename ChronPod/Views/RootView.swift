@@ -2,7 +2,7 @@ import SwiftUI
 import ChronPodCore
 
 /// When the app is started with `-screenshot <screen>` (as the GitHub build does), it opens that screen
-/// so the build can photograph it. Screens: home, topics, subscriptions, queue, downloads, settings.
+/// so the build can photograph it. Screens: home, topics, article, add, queue, episodes, subscriptions, settings.
 enum ScreenshotMode {
     static var screen: String? { UserDefaults.standard.string(forKey: "screenshot") }
 }
@@ -15,9 +15,9 @@ struct RootView: View {
 
     private static var initialTab: Int {
         switch ScreenshotMode.screen {
-        case "subscriptions": return 1
-        case "queue": return 2
-        case "downloads": return 3
+        case "queue": return 1
+        case "episodes": return 2
+        case "subscriptions": return 3
         case "settings": return 4
         default: return 0
         }
@@ -30,20 +30,20 @@ struct RootView: View {
                 .tabItem { Label("Home", systemImage: "house") }
                 .tag(0)
 
-            NavigationStack { SubscriptionsView().withDestinations() }
-                .withMiniPlayer()
-                .tabItem { Label("Subscriptions", systemImage: "square.stack") }
-                .tag(1)
-
             NavigationStack { QueueView().withDestinations() }
                 .withMiniPlayer()
                 .tabItem { Label("Queue", systemImage: "list.bullet") }
                 .badge(library.queue.count)
+                .tag(1)
+
+            NavigationStack { EpisodesView().withDestinations() }
+                .withMiniPlayer()
+                .tabItem { Label("Episodes", systemImage: "play.square.stack") }
                 .tag(2)
 
-            NavigationStack { DownloadsView().withDestinations() }
+            NavigationStack { SubscriptionsView().withDestinations() }
                 .withMiniPlayer()
-                .tabItem { Label("Downloads", systemImage: "arrow.down.circle") }
+                .tabItem { Label("Subscriptions", systemImage: "square.stack") }
                 .tag(3)
 
             NavigationStack { SettingsView() }

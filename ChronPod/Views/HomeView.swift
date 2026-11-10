@@ -4,7 +4,8 @@ import ChronPodCore
 struct HomeView: View {
     @EnvironmentObject private var library: LibraryStore
     @State private var showTopics = ScreenshotMode.screen == "topics"
-    @State private var showAdd = false
+    @State private var showAdd = ScreenshotMode.screen == "add"
+    @AppStorage(DiscoverPrefs.showOnHomeKey) private var showDiscover = true
     @State private var screenshotArticle: WebLink?
 
     var body: some View {
@@ -52,6 +53,10 @@ struct HomeView: View {
                 } header: {
                     Label("Your ChronLaw Topics", systemImage: "newspaper")
                 }
+            }
+
+            if showDiscover {
+                DiscoverHomeSection { showAdd = true }
             }
 
             Section {

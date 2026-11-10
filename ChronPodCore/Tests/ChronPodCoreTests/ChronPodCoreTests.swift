@@ -272,3 +272,56 @@ final class MiscTests: XCTestCase {
         XCTAssertEqual(results[0].feedURL, "https://lp.example/rss")
     }
 }
+
+final class DiscoveryTests: XCTestCase {
+    func testTopChartParsing() {
+        let json = #"""
+        {"feed":{"entry":[
+          {"im:name":{"label":"Law Talk"},"im:artist":{"label":"Bar Assoc"},
+           "im:image":[{"label":"https://img.example/55.jpg","attributes":{"height":"55"}},
+                       {"label":"https://img.example/170.jpg","attributes":{"height":"170"}}],
+           "id":{"label":"https://podcasts.apple.com/x","attributes":{"im:id":"12345"}}},
+          {"im:name":{"label":"News Daily"},
+           "im:image":[{"label":"https://img.example/n.jpg","attributes":{"height":"100"}}],
+           "id":{"attributes":{"im:id":"678"}}}
+        ]}}
+        """#
+        let items = Discovery.parseTopChart(Data(json.utf8))
+        XCTAssertEqual(items.count, 2)
+        XCTAssertEqual(items[0].title, "Law Talk")
+        XCTAssertEqual(items[0].author, "Bar Assoc")
+        XCTAssertEqual(items[0].itunesID, "12345")
+        XCTAssertEqual(items[0].imageURL, "https://img.example/170.jpg")
+        XCTAssertNil(items[1].author)
+        XCTAssertTrue(Discovery.topChartURL(country: "US", genre: 1489).absoluteString
+            .hasSuffix("/us/rss/toppodcasts/limit=25/genre=1489/explicit=true/json"))
+        XCTAssertFalse(Discovery.topChartURL(country: "us", genre: 0).absoluteString.contains("genre="))
+    }
+
+    func testLookupFyydPodcastIndex() {
+        XCTAssertEqual(Discovery.parseLookup(Data(#"{"resultCount":1,"results":[{"feedUrl":"https://f.example/rss"}]}"#.utf8)),
+                       "https://f.example/rss")
+        XCTAssertNil(Discovery.parseLookup(Data(#"{"results":[{}]}"#.utf8)))
+
+        let fyyd = Discovery.parseFyyd(Data(#"{"data":[{"title":"F1","author":"A","xmlURL":"https://f1.example/feed","thumbImageURL":"https://f1.example/t.jpg"},{"title":"NoFeed"}]}"#.utf8))
+        XCTAssertEqual(fyyd.count, 1)
+        XCTAssertEqual(fyyd[0].source, "fyyd")
+
+        let pi = Discovery.parsePodcastIndex(Data(#"{"feeds":[{"title":"P1","url":"https://p1.example/rss","artwork":"","image":"https://p1.example/i.png"}]}"#.utf8))
+        XCTAssertEqual(pi.first?.imageURL, "https://p1.example/i.png")
+
+        let headers = Discovery.podcastIndexHeaders(key: "K", secret: "S", now: Date(timeIntervalSince1970: 1000))
+        XCTAssertEqual(headers["X-Auth-Date"], "1000")
+        // sha1("KS1000")
+        XCTAssertEqual(headers["Authorization"], "b151858229b0417938c3396a36bb0643f1e692d5")
+    }
+
+    func testMerge() {
+        let a = [DiscoveredPodcast(title: "A", feedURL: "https://a.example/rss", source: "Apple Podcasts"),
+                 DiscoveredPodcast(title: "B", feedURL: "https://b.example/rss", source: "Apple Podcasts")]
+        let b = [DiscoveredPodcast(title: "B2", feedURL: "http://www.b.example/rss/", source: "fyyd"),
+                 DiscoveredPodcast(title: "C", feedURL: "https://c.example/rss", source: "fyyd")]
+        let merged = Discovery.merge([a, b])
+        XCTAssertEqual(merged.map(\.title), ["B", "A", "C"])
+    }
+}

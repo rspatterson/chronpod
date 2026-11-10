@@ -4,7 +4,7 @@
 
 ChronPod brings AntennaPod's approach to iOS: no account, no tracking, and your subscriptions stored on your device. It also has a built-in **ChronLaw** directory of legal-news topics.
 
-## Features (version 0.1)
+## Features (version 0.2)
 
 - **ChronLaw Breaking News on the Home screen.** The first time ChronPod opens, it subscribes to the ChronLaw *Breaking News* feeds.
 - **ChronLaw Topics.** A checkbox list of more than 200 legal-news topics, from Administrative Law to Workers' Compensation, works like AntennaPod's OPML import screen. Tick the topics you want and tap **Done**.
@@ -12,12 +12,18 @@ ChronPod brings AntennaPod's approach to iOS: no account, no tracking, and your 
   - If the website has no list, ChronPod uses the copy built into the app (`ChronPod/Resources/chronlaw.opml`).
 - **Headlines only, by design.** For news topics ChronPod shows the headline, publisher and date, and nothing more. Tapping a headline opens the story on the publisher's own website. ChronPod never copies or displays article text, the same approach the ChronLaw web pages have always taken.
 - **Direct article links.** News stories open on the publisher's own website, not through Google's redirect links. This uses the same method as the ChronLaw tt-rss plugin.
+- **Discover.** Popular podcasts appear on Home, as in AntennaPod. The Add Podcast screen shows Apple's **Top Podcasts** by category (News, Government, True Crime, Business, History and more) and by country.
+- **Search several directories at once.** Searches Apple Podcasts and fyyd, plus Podcast Index if you enter your own free API key in Settings. Results are merged and duplicates removed, like AntennaPod's combined search.
+- **Preview before subscribing.** Tap any search or chart result to see the show's description and latest episodes, then subscribe.
+- **Episodes tab.** Every episode from every podcast in one list, filtered by Unplayed, In Progress, Downloaded or Favorites, with search and swipe actions (queue, mark played, favorite).
+- **Auto-download and cleanup.** Turn on auto-download per podcast. Optionally delete downloads after playing.
+- **Background refresh.** iOS refreshes your feeds in the background a few times a day.
 - **Podcasts.**
   - Find shows through Apple's public podcast directory, or add any RSS/Atom feed by its address.
   - Stream or download episodes.
   - Background and lock-screen playback.
   - Playback speeds from 0.75× to 3×.
-  - Skip back 10 seconds or forward 30 seconds.
+  - Adjustable skip intervals (5–60 seconds).
   - Sleep timer.
   - Remembers where you stopped in each episode.
 - **Queue.** Line up episodes and reorder them; ChronPod plays the queue in order.
@@ -74,15 +80,15 @@ ChronPod checks for the list each time it starts.
 
 ## Roadmap
 
-These AntennaPod features are next:
+These AntennaPod features are next. Contributions are very welcome:
 
-- Automatic background refresh and auto-download
-- Chapters
+- Chapters (Podcasting 2.0 and ID3)
+- Video playback
 - Statistics
 - gpodder.net / Nextcloud sync
-- Video playback
-- Per-feed settings
-- Home-screen widgets
+- New-episode notifications
+- More per-feed settings (playback speed, skip intro/outro, episode cleanup)
+- Home-screen widgets and CarPlay
 
 ## License and credits
 

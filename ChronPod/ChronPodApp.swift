@@ -6,6 +6,7 @@
 // License, or (at your option) any later version. See LICENSE.
 
 import SwiftUI
+import BackgroundTasks
 import ChronPodCore
 
 @main
@@ -24,12 +25,44 @@ struct ChronPodApp: App {
                 .tint(Theme.accent)
                 .task {
                     player.attach(library: library, downloads: downloads)
+                    let dm = downloads
+                    library.onNewEpisodes = { episodes in
+                        for ep in episodes { dm.download(ep) }
+                    }
+                    BackgroundRefresh.library = library
                     await library.bootstrap()
                 }
         }
         .onChange(of: scenePhase) { _, phase in
-            if phase == .background { library.saveNow() }
+            if phase == .background {
+                library.saveNow()
+                BackgroundRefresh.schedule()
+            }
         }
+        .backgroundTask(.appRefresh(BackgroundRefresh.identifier)) {
+            await BackgroundRefresh.run()
+        }
+    }
+}
+
+/// Refreshes subscriptions while the app is in the background (AntennaPod: FeedUpdateWorker).
+/// iOS decides exactly when this runs, usually a few times a day.
+@MainActor
+enum BackgroundRefresh {
+    static let identifier = "com.chronlaw.chronpod.refresh"
+    static weak var library: LibraryStore?
+
+    static func schedule() {
+        let request = BGAppRefreshTaskRequest(identifier: identifier)
+        request.earliestBeginDate = Date(timeIntervalSinceNow: 60 * 60)
+        try? BGTaskScheduler.shared.submit(request)
+    }
+
+    static func run() async {
+        schedule()
+        guard let library else { return }
+        await library.refreshAll()
+        library.saveNow()
     }
 }
 

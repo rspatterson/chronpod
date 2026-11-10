@@ -14,6 +14,23 @@ final class LibraryStore: ObservableObject {
         var positions: [String: Double] = [:]
         var played: Set<String> = []
         var starterSubscribed = false
+        var favorites: Set<String> = []
+        var autoDownload: Set<String> = []
+
+        init() {}
+
+        // Every field is optional when reading, so files saved by older versions still load.
+        init(from decoder: Decoder) throws {
+            let c = try decoder.container(keyedBy: CodingKeys.self)
+            podcasts = try c.decodeIfPresent([Podcast].self, forKey: .podcasts) ?? []
+            episodes = try c.decodeIfPresent([String: [Episode]].self, forKey: .episodes) ?? [:]
+            queue = try c.decodeIfPresent([String].self, forKey: .queue) ?? []
+            positions = try c.decodeIfPresent([String: Double].self, forKey: .positions) ?? [:]
+            played = try c.decodeIfPresent(Set<String>.self, forKey: .played) ?? []
+            starterSubscribed = try c.decodeIfPresent(Bool.self, forKey: .starterSubscribed) ?? false
+            favorites = try c.decodeIfPresent(Set<String>.self, forKey: .favorites) ?? []
+            autoDownload = try c.decodeIfPresent(Set<String>.self, forKey: .autoDownload) ?? []
+        }
     }
 
     @Published private(set) var podcasts: [Podcast] = []
@@ -21,6 +38,12 @@ final class LibraryStore: ObservableObject {
     @Published private(set) var queue: [String] = []
     @Published private(set) var positions: [String: Double] = [:]
     @Published private(set) var played: Set<String> = []
+    @Published private(set) var favorites: Set<String> = []
+    /// Podcasts whose new episodes download automatically.
+    @Published private(set) var autoDownload: Set<String> = []
+
+    /// Called with newly found episodes of auto-download podcasts (the app passes them to the downloader).
+    var onNewEpisodes: (@MainActor ([Episode]) -> Void)?
 
     @Published private(set) var directory: [DirectoryCategory] = []
     @Published private(set) var directorySource = "built-in list"
@@ -178,11 +201,27 @@ final class LibraryStore: ObservableObject {
         return p
     }
 
+    /// Subscribes using a feed that was already downloaded for the preview screen.
+    @discardableResult
+    func subscribe(url input: String, parsed: ParsedFeed) -> Podcast {
+        let url = FeedFetcher.normalize(input)
+        if let existing = podcast(url) { return existing }
+        var p = Podcast(feedURL: url, title: parsed.title)
+        apply(parsed, to: &p, keepTitle: false)
+        p.lastRefreshed = Date()
+        podcasts.append(p)
+        sortPodcasts()
+        merge(parsed.episodes, into: p)
+        scheduleSave()
+        return p
+    }
+
     func unsubscribe(_ feedURL: String) {
         podcasts.removeAll { $0.feedURL == feedURL }
         let removed = Set((episodesByPodcast[feedURL] ?? []).map(\.id))
         episodesByPodcast[feedURL] = nil
         queue.removeAll { removed.contains($0) }
+        autoDownload.remove(feedURL)
         scheduleSave()
     }
 
@@ -234,6 +273,7 @@ final class LibraryStore: ObservableObject {
         let urls = list.map(\.feedURL).filter { !refreshing.contains($0) }
         guard !urls.isEmpty else { return }
         refreshing.formUnion(urls)
+        var fresh: [Episode] = []
         var index = 0
         while index < urls.count {
             let batch = Array(urls[index..<min(index + 6, urls.count)])
@@ -259,7 +299,12 @@ final class LibraryStore: ObservableObject {
                     p.lastRefreshed = Date()
                     p.lastError = nil
                     podcasts[i] = p
-                    merge(parsed.episodes, into: p)
+                    let hadEpisodes = !(episodesByPodcast[p.id] ?? []).isEmpty
+                    let new = merge(parsed.episodes, into: p)
+                    // Only episodes that appeared since the last refresh, never a whole back catalog.
+                    if hadEpisodes && autoDownload.contains(p.id) {
+                        fresh += new.filter { $0.hasMedia && !played.contains($0.id) }
+                    }
                 case .failure(let error):
                     podcasts[i].lastError = error.localizedDescription
                 }
@@ -267,6 +312,7 @@ final class LibraryStore: ObservableObject {
         }
         refreshing.subtract(urls)
         scheduleSave()
+        if !fresh.isEmpty { onNewEpisodes?(fresh) }
     }
 
     func refresh(_ podcast: Podcast) async {
@@ -282,7 +328,9 @@ final class LibraryStore: ObservableObject {
         p.link = parsed.link ?? p.link
     }
 
-    private func merge(_ fresh: [Episode], into p: Podcast) {
+    /// Stores the feed's episodes; returns the ones that were not known before.
+    @discardableResult
+    private func merge(_ fresh: [Episode], into p: Podcast) -> [Episode] {
         let old = episodesByPodcast[p.id] ?? []
         let oldByID = Dictionary(old.map { ($0.id, $0) }, uniquingKeysWith: { a, _ in a })
         var merged: [Episode] = []
@@ -300,6 +348,7 @@ final class LibraryStore: ObservableObject {
             merged = Array(merged.prefix(limit)) + merged.dropFirst(limit).filter { keep.contains($0.id) }
         }
         episodesByPodcast[p.id] = merged
+        return fresh.filter { oldByID[$0.id] == nil }
     }
 
     private func sortPodcasts() {
@@ -362,6 +411,28 @@ final class LibraryStore: ObservableObject {
         scheduleSave()
     }
 
+    func isFavorite(_ ep: Episode) -> Bool { favorites.contains(ep.id) }
+
+    func toggleFavorite(_ ep: Episode) {
+        if favorites.contains(ep.id) { favorites.remove(ep.id) } else { favorites.insert(ep.id) }
+        scheduleSave()
+    }
+
+    func isAutoDownload(_ podcastID: String) -> Bool { autoDownload.contains(podcastID) }
+
+    func setAutoDownload(_ podcastID: String, _ on: Bool) {
+        if on { autoDownload.insert(podcastID) } else { autoDownload.remove(podcastID) }
+        scheduleSave()
+    }
+
+    func markAllPlayed(_ podcastID: String) {
+        for e in episodes(for: podcastID) {
+            played.insert(e.id)
+            positions[e.id] = nil
+        }
+        scheduleSave()
+    }
+
     /// Called when an episode finishes: mark it played, take it off the queue, return what plays next.
     func finished(_ id: String) -> Episode? {
         played.insert(id)
@@ -390,6 +461,8 @@ final class LibraryStore: ObservableObject {
         positions = s.positions
         played = s.played
         starterSubscribed = s.starterSubscribed
+        favorites = s.favorites
+        autoDownload = s.autoDownload
     }
 
     private func scheduleSave() {
@@ -402,8 +475,15 @@ final class LibraryStore: ObservableObject {
     }
 
     func saveNow() {
-        let s = State(podcasts: podcasts, episodes: episodesByPodcast, queue: queue, positions: positions,
-                      played: played, starterSubscribed: starterSubscribed)
+        var s = State()
+        s.podcasts = podcasts
+        s.episodes = episodesByPodcast
+        s.queue = queue
+        s.positions = positions
+        s.played = played
+        s.starterSubscribed = starterSubscribed
+        s.favorites = favorites
+        s.autoDownload = autoDownload
         let url = stateURL
         Task.detached(priority: .utility) {
             if let data = try? JSONEncoder().encode(s) {
